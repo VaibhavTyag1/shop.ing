@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop.ing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+    <div class="logo">shop.ing</div>
+
+    <input type="text" id="search" placeholder="Search products...">
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pages/electronics.html">Electronics</a>
+        <a href="pages/fashion.html">Fashion</a>
+        <a href="pages/shoes.html">Shoes</a>
+        <a href="pages/deals.html">Deals</a>
+    </nav>
+
+    <a href="cart.html" class="cart">
+        🛒 <span id="cart-count">0</span>
+    </a>
+</header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Discover Premium Products</h1>
+        <p>Smart. Stylish. Affordable.</p>
+        <button onclick="scrollToProducts()">Explore Now</button>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+
+        <div class="card">
+            <img src="images/shoes.jpg">
+            <h3>Running Shoes</h3>
+            <p>₹1,499</p>
+
+            <button onclick="addToCart('Running Shoes', 1499)">
+                Add to Cart 🛒
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="images/headphones.jpg">
+            <h3>Wireless Headphones</h3>
+            <p>₹2,999</p>
+
+            <button onclick="addToCart('Wireless Headphones', 2999)">
+                Add to Cart 🛒
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="images/watch.jpg">
+            <h3>Smart Watch</h3>
+            <p>₹3,499</p>
+
+            <button onclick="addToCart('Smart Watch', 3499)">
+                 Add to Cart 🛒
+                </button>
+            </div>
+
+        <div class="card">
+             <img src="images/sofa.jpg">
+
+             <h3>Luxury Sofa</h3>
+
+             <p>₹15,999</p>
+
+             <button onclick="addToCart('Luxury Sofa', 15999)">
+                Add to Cart 🛒
+            </button>
+        </div>
+
+        <div class="card">
+             <img src="images/tshirt.jpg">
+             <h3>Casual T-Shirt</h3>
+             <p>₹799</p>
+
+             <button onclick="addToCart('Casual T-Shirt', 799)">
+                 Add to Cart 🛒
+                </button>
+            </div>
+
+       <div class="card">
+        <img src="images/gaming.jpg">
+        <h3>Gaming Console</h3>
+         <p>₹29,999</p>
+         <button onclick="addToCart('Gaming Console', 29999)">
+              Add to Cart 🛒
+            </button>
+        </div>
+
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>

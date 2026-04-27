@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: white;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: #111;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffcc;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #00ffcc, #0066ff);
+    color: black;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* PRODUCTS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 50px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #00ffcc;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/* SEARCH BAR */
+#search {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 200px;
+}
+
+/* CART */
+.cart {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* CARD HOVER GLOW */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(0,255,204,0.3), transparent);
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;   /* 🔥 ADD THIS LINE ONLY */
+}
+.card:hover::before {
+    opacity: 1;
+}
+
+/* BUTTON HOVER */
+button:hover {
+    transform: scale(1.1);
+}
+
+/* NAVBAR LAYOUT FIX */
+header {
+    align-items: center;
+    gap: 20px;
+}
+.card button {
+    margin-top: 12px;
+    padding: 10px 18px;
+    border: none;
+    background: linear-gradient(135deg, #00ffcc, #0066ff);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #00ccaa, #0044cc);
+}
+#cart-count {
+    background: #00ffcc;
+    color: black;
+    padding: 2px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.cart {
+    text-decoration: none;
+    color: white;
+}
+.products button {
+    margin: 10px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.products button:hover {
+    transform: scale(1.05);
+}
+
+.products button:nth-child(2) {
+    background: #00ffcc;
+    color: black;
+}
+
+.products button:nth-child(3) {
+    background: red;
+    color: white;
+}
